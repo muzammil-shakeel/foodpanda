@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background: linear-gradient(to right, #fff1eb, #ace0f9);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    nav {
+      background-color: #34495e;
+      color: white;
+      padding: 15px 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logout-btn {
+      background-color: #e67e22;
+      border: none;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .logout-btn:hover {
+      background-color: #d35400;
+    }
+
+    .cart-header {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .total-section {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    Your Cart
+    <button class="logout-btn" onclick="logoutUser()">Logout</button>
+  </nav>
+
+  <div class="container">
+    <h2 class="cart-header">Items in Your Cart</h2>
+    <div class="row g-4" id="cart-list"></div>
+    <div class="total-section" id="total-amount">Total: $0.00</div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="app.js" type="module"></script>
+
+  <script>
+    // Load cart items (You should implement this in app.js)
+    window.addEventListener("DOMContentLoaded", () => {
+      loadCart();
+    });
+  </script>
+
+</body>
+</html>
